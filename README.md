@@ -5,7 +5,7 @@
 
 ## Installation
 1. Download and install the [VLC media player](https://www.videolan.org/vlc/index.html)
-2. Download the player from the [release](https://github.com/Anton-Euro/lofi-player/releases/tag/release) or
+2. Download the player from the [releases](https://github.com/Anton-Euro/lofi-player/releases/tag/release) or
 ```bash
 git clone https://github.com/Anton-Euro/lofi-player.git
 cd lofi-player
