@@ -2,6 +2,11 @@ import customtkinter
 import pystray
 from pystray import MenuItem as item
 from PIL import Image
+import os
+data_dir = os.getcwd() + '\\data'
+os.environ.setdefault('VLC_PLUGIN_PATH', data_dir)
+os.add_dll_directory(data_dir)
+os.chdir('data')
 import vlc
 from yt_dlp import YoutubeDL
 from threading import Thread
@@ -24,7 +29,7 @@ def play():
     if song_info == None:
         label.configure(text="connecting...")
         label.update()
-        with YoutubeDL({'format': 'bestaudio'}) as ydl:
+        with YoutubeDL({'format': 'bestaudio','no_warnings': True,'quiet': True}) as ydl:
             song_info = ydl.extract_info(url, download=False)
         
         media_player = vlc.MediaPlayer()
@@ -60,8 +65,8 @@ def show_window(icon):
 
 def withdraw_window():  
     app.withdraw()
-    image = Image.open('img\logo.ico')
-    menu = (item('Выйти', quit_window), item('Развернуть', show_window))
+    image = Image.open(data_dir+'\\logo.ico')
+    menu = (item('quit', quit_window), item('show', show_window))
     icon = pystray.Icon("player", image, "lofi player", menu)
     icon.run()
 
