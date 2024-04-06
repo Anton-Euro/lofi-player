@@ -1,6 +1,8 @@
 # Lofi Player
 <p align='center'><img src="https://i.imgur.com/6umWaZp.png"></p>
 
+### [Rust version](https://github.com/Anton-Euro/lofi-tray)
+
 **Lofi Player** is an application for playing music from the YouTube broadcast of [Lofi Hip Hop Radio 📚 - beats to relax/study to](https://www.youtube.com/watch?v=jfKfPfyJRdk)
 
 ## Installation
